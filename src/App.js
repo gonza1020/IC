@@ -16,7 +16,7 @@ function App() {
           rel="noopener noreferrer"
           data-testid='learn-link'
         >
-          Learn React
+          Entrar a Twitter
         </a>
       </header>
     </div>
