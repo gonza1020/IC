@@ -1,0 +1,20 @@
+name: CI
+on: [push]
+jobs: 
+  CI: 
+    name: Gonza y Mati
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+
+      - name: Install packages
+        run: npm ci
+      
+      - name: Testing
+        run: npm t
+
+      - name: Build
+        run: npm run build
