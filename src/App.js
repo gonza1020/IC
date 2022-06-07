@@ -11,7 +11,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://twittasdasder.com"
+          href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
         >
