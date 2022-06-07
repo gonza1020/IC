@@ -11,7 +11,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://twitter.com"
+          href="https://twitterasdasd.com"
           target="_blank"
           rel="noopener noreferrer"
           data-testid='learn-link'
