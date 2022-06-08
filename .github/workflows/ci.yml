@@ -1,14 +1,14 @@
 name: CI
-on: 
-  push: 
+on:
+  push:
     branches: [master]
   pull_request:
     branches: [master]
-jobs: 
-  CI: 
+jobs:
+  CI:
     name: Gonza y Mati
     runs-on: ubuntu-latest
-  
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,9 +16,6 @@ jobs:
 
       - name: Install packages
         run: npm ci
-      
-      - name: Testing
-        run: npm t
 
-      - name: Build
+      - name: Test & Build
         run: npm run build
