@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://facebook.com"
+          href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
           data-testid='learn-link'
