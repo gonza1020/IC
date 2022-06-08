@@ -14,8 +14,9 @@ function App() {
           href="https://twitterr.com"
           target="_blank"
           rel="noopener noreferrer"
+          data-testid='learn-link'
         >
-          Learn React
+          Entrar a Twitter
         </a>
       </header>
     </div>
