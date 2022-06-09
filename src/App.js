@@ -6,13 +6,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>La vagancia con jira. Que onda perro</p>
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
         <a
           className="App-link"
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
-          data-testid="learn-link"
+          data-testid='learn-link'
         >
           Entrar a Twitter
         </a>

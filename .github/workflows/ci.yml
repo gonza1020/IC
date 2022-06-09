@@ -10,35 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-
-
       - name: Checkout code
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: "npm"
 
-    #  - name: Cache node modules
-    #    id: cache-npm
-    #    uses: actions/cache@v3
-    #    env: 
-    #      cache-name: cache-node-modules
-    #    with:
-    #      path: ~/.npm/node_modules
-    #      key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-    #      restore-keys: |
-    #        ${{ runner.os }}-build-${{ env.cache-name }}-
-    #        ${{ runner.os }}-build-
-    #        ${{ runner.os }}-
-    #  - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
-    #    name: Install node_modules
-    #    #continue-on-error: true
-    #    run: npm ci
-      
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - uses: actions/cache@v3
+        id: cache-npm # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{steps.npm-cache-dir.outputs.dir}}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: Install node_modules
+        #continue-on-error: true
+        run: npm ci
       - name: Install packages
         run: npm ci
-      
-    # - name: Install packages
-    #  run: npm ci
 
       - name: Test & Build
         run: npm run build
