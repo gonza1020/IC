@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-          cache: 'npm'
+          cache: "npm"
 
       - name: Get npm cache directory
         id: npm-cache-dir
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/cache@v3
         id: cache-npm # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
-          path: steps.npm-cache-dir.outputs.dir 
+          path: ${{steps.npm-cache-dir.outputs.dir}}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
