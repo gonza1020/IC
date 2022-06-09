@@ -36,6 +36,9 @@ jobs:
       
       - name: Install packages
         run: npm ci
+      
+    # - name: Install packages
+    #  run: npm ci
 
       - name: Test & Build
         run: npm run build
