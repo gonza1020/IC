@@ -13,3 +13,9 @@ test('url is correct', ()=>{
   const linkElement = screen.getByTestId('learn-link')
   expect(linkElement.href).toContain('twitter.com');
 })
+
+test('Profe tiene que aprobarme', ()=>{
+  render(<App></App>)
+  const nota = screen.getByTestId('exam')
+  expect(parseInt(nota.textContent)).toBeGreaterThan(5);
+})
