@@ -36,5 +36,9 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: Test & Build
+      - name: Test
+        run: npm t
+      
+      - name: Build
+        if: ${{github.event_name == 'push'}} 
         run: npm run build
