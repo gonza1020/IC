@@ -9,17 +9,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Profe usted tiene aprobarme con una nota de: </p>
-        <p data-testid = 'exam'>
-          7
-        </p>
+        <p data-testid="exam">7</p>
         <a
           className="App-link"
-          href="https://twitter.com"
+          href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          data-testid='learn-link'
+          data-testid="learn-link"
         >
-          Entrar a Twitter
+          Entrar a Facebook
         </a>
       </header>
     </div>
