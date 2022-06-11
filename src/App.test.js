@@ -16,5 +16,5 @@ test("url is correct", () => {
 test("Profe tiene que aprobarme", () => {
   render(<App></App>);
   const nota = screen.getByTestId("exam");
-  expect(parseInt(nota.textContent)).toBeGreaterThan(6);
+  expect(parseInt(nota.textContent)).toBeGreaterThan(5);
 });
