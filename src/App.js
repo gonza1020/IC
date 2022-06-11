@@ -8,12 +8,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-PC-18-como-usuario-quiero-ver-mi-nota-del-parcial
         <p>Profe usted tiene que ponerme una nota mayor o igual a: </p>
         <p data-testid = 'exam'>
           9
         </p>
-
         <a
           className="App-link"
           href="https://facebook.com"
