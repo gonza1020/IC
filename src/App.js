@@ -10,7 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Profe usted tiene que ponerme una nota mayor o igual a: </p>
         <p data-testid = 'exam'>
-          6
+          5
         </p>
         <a
           className="App-link"
