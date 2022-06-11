@@ -10,11 +10,14 @@ import App from "./App";
 test("url is correct", () => {
   render(<App />);
   const linkElement = screen.getByTestId("learn-link");
-  expect(linkElement.href).toContain("facebook.com");
+  expect(linkElement.href).toContain("twitter.com");
+
 });
 
 test("Profe tiene que aprobarme", () => {
   render(<App></App>);
   const nota = screen.getByTestId("exam");
-  expect(parseInt(nota.textContent)).toBeGreaterThan(6);
+
+  expect(parseInt(nota.textContent)).toBeGreaterThan(8);
+
 });

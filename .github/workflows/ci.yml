@@ -31,14 +31,10 @@ jobs:
 
       - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         name: Install node_modules
-        #continue-on-error: true
+        continue-on-error: true
         run: npm ci
       - name: Install packages
         run: npm ci
 
       - name: Test
         run: npm t
-      
-      - name: Build
-        if: ${{github.event_name == 'push'}} 
-        run: npm run build
