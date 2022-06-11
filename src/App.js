@@ -9,6 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Profe usted tiene que ponerme una nota mayor o igual a: </p>
+
         <p data-testid = 'exam'>
           9
         </p>
@@ -21,6 +22,7 @@ function App() {
         >
           Entrar a Facebook
         </a>
+        <p>Holaa</p>
       </header>
     </div>
   );
