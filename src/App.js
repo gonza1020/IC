@@ -2,14 +2,15 @@ import logo from "./logo.svg";
 import "./App.css";
 
 //this shouldnt deploy
-
+//this shouldnt deploy from develop
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <p>Profe usted tiene que ponerme una nota mayor o igual a: </p>
+        <p data-testid = 'exam'>
+          6
         </p>
         <a
           className="App-link"
